@@ -1,31 +1,38 @@
 /*
-  Conditionals
+  Logical Operators
   ---------------------------------
-  Write a function to test if a provided number is negative or positive
-  - if number is less than zero, return the word "negative"
-  - if number is more or equal to zero, return the word "positive"
+  This program calls some functions that are either missing or incomplete.
+  Update the code so that you get the expected result.
 */
 
-function negativeOrPositive(number) {
-  let res = Math.sign(number);
-  return res >= 0 ? "Positive" : "negative";
+function isNegative(str) {
+  return Math.sign(str) < 0 ? true : false;
 }
-
+function isBetween5and10(str) {
+  return (str <= 10 && str >= 5) ? true : false;
+}
+function isShortName(str) {
+  return str.length < 10 ? true : false;
+}
+function startsWithD(str) {
+  return str[0] === 'D' ? true : false;
+}
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
-var number1 = 5;
-var number2 = -1;
-var number3 = 0;
 
-console.log(number1 + " is " + negativeOrPositive(number1));
-console.log(number2 + " is " + negativeOrPositive(number2));
-console.log(number3 + " is " + negativeOrPositive(number3));
+console.log("Is -10 is a negative number?", isNegative(-10));
+console.log("Is 5 a negative number?", isNegative(5));
+console.log("Is 10 in the range 5-10?", isBetween5and10(10));
+console.log("Is Daniel a short name?", isShortName("Daniel"));
+console.log("Does Daniel start with 'D'?", startsWithD("Daniel"));
 
 /*
   EXPECTED RESULT
   ---------------
-  5 is positive
-  -1 is negative
-  0 is positive
+  Is -10 is a negative number? true
+  Is 5 a negative number? false
+  Is 10 in the range 5-10? true
+  Is Daniel a short name? true
+  Does Daniel start with 'D'?
 */
