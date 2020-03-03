@@ -4,11 +4,10 @@
   Write a function that checks if a student has passed
   - if the grade is less than 50 then return "failed"
   - if 50 or higher then return "passed"
-
 */
 
 function studentPassed(grade) {
-
+  return grade <= 50 ? "failed" : "passed";
 }
 
 /* 
@@ -22,7 +21,7 @@ console.log("'" + grade1 + "': " + studentPassed(grade1))
 console.log("'" + grade2 + "': " + studentPassed(grade2))
 console.log("'" + grade3 + "': " + studentPassed(grade3))
 
-/* 
+/*
 EXPECTED RESULT
 ---------------
 '49': failed

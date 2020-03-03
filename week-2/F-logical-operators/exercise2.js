@@ -1,28 +1,31 @@
 /*
-  Logical Operators
+  Conditionals
   ---------------------------------
-  This program calls some functions that are either missing or incomplete.
-  Update the code so that you get the expected result.
+  Write a function to test if a provided number is negative or positive
+  - if number is less than zero, return the word "negative"
+  - if number is more or equal to zero, return the word "positive"
 */
 
-function isNegative() {}
+function negativeOrPositive(number) {
+  let res = Math.sign(number);
+  return res >= 0 ? "Positive" : "negative";
+}
 
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
+var number1 = 5;
+var number2 = -1;
+var number3 = 0;
 
-console.log("Is -10 is a negative number?", isNegative(-10));
-console.log("Is 5 a negative number?", isNegative(5));
-console.log("Is 10 in the range 5-10?", isBetween5and10(10));
-console.log("Is Daniel a short name?", isShortName("Daniel"));
-console.log("Does Daniel start with 'D'?", startsWithD("Daniel"));
+console.log(number1 + " is " + negativeOrPositive(number1));
+console.log(number2 + " is " + negativeOrPositive(number2));
+console.log(number3 + " is " + negativeOrPositive(number3));
 
-/* 
+/*
   EXPECTED RESULT
   ---------------
-  Is -10 is a negative number? true
-  Is 5 a negative number? false
-  Is 10 in the range 5-10? true
-  Is Daniel a short name? true
-  Does Daniel start with 'D'?
+  5 is positive
+  -1 is negative
+  0 is positive
 */
